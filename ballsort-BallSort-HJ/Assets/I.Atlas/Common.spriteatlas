@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Common
+  serializedVersion: 2
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 0
+      compressionQuality: 0
+      maxTextureSize: 0
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: iPhone
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 33
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 48
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: fb5bb09d10e88aa45bd22dffff3afec6, type: 3}
+    - {fileID: 2800000, guid: c70fc48c1788ef049a85f2236c871076, type: 3}
+    - {fileID: 2800000, guid: 563b0251f131ae245817f06efbde59a4, type: 3}
+    - {fileID: 2800000, guid: abd1ff2892d915f43b4cac573f3cda5c, type: 3}
+    - {fileID: 2800000, guid: 6375e4e54f50c5b4b921b0cbc2576690, type: 3}
+    - {fileID: 2800000, guid: 699d9f6daca0b1549a6a76a8c7510796, type: 3}
+    - {fileID: 2800000, guid: ae9420cedb5b441499ee2f1826c483a0, type: 3}
+    - {fileID: 2800000, guid: e4a09f6cf44b2a64d89287e7ca8fe361, type: 3}
+    - {fileID: 2800000, guid: 32354dd251cde45478706fcaae5f7eda, type: 3}
+    - {fileID: 2800000, guid: 3d825f62c812d5b48b447859015e62eb, type: 3}
+    - {fileID: 2800000, guid: 5b23b98d547b65d43b2d87996cd77f9d, type: 3}
+    - {fileID: 2800000, guid: 8b65e1d28a3627b43a552d1fd1bd5e35, type: 3}
+    - {fileID: 2800000, guid: adf67caa109be1b4aba1f68ff3995b54, type: 3}
+    - {fileID: 2800000, guid: 8e31809446f9f19458bab126a01c77a2, type: 3}
+    - {fileID: 2800000, guid: 9772874755d94b34f8f9c74691e1cc46, type: 3}
+    - {fileID: 2800000, guid: 80a634fc614a68d4da4e7027cd0f8e58, type: 3}
+    - {fileID: 2800000, guid: 332410766d71b0c408fe1e35a898c983, type: 3}
+    - {fileID: 2800000, guid: c594cd8ed85576745bf2662503d7789a, type: 3}
+    - {fileID: 2800000, guid: b83cb424541f3b14981c82d434e9a764, type: 3}
+    - {fileID: 2800000, guid: 3180f6d16a1a09a4ca08a682165789f9, type: 3}
+    - {fileID: 2800000, guid: 4c4db80e35781c343ac50ed455193127, type: 3}
+    - {fileID: 2800000, guid: e1cdb9a709cefcc44a6a522c43e0a6e2, type: 3}
+    - {fileID: 2800000, guid: a0a622b3c27baad42b036bcdf5333f5d, type: 3}
+    - {fileID: 2800000, guid: bd10944be0f6b944d9f5d2010ad048a8, type: 3}
+    - {fileID: 2800000, guid: 2b433376897794941a3a7069c6ce064f, type: 3}
+    - {fileID: 2800000, guid: 3259f24bc89ad1c42b54d1f7f48bf019, type: 3}
+    - {fileID: 2800000, guid: 81128940362c88e4fb2aa66bd72192c5, type: 3}
+    - {fileID: 2800000, guid: cea28080b21bb2146a87367e4985e646, type: 3}
+    - {fileID: 2800000, guid: 183123fd631b35747b65e7eed6261b54, type: 3}
+    - {fileID: 2800000, guid: b74cc95412d5df64aae689463ebda6d6, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites: []
+  m_PackedSpriteNamesToIndex: []
+  m_RenderDataMap: {}
+  m_Tag: Common
+  m_IsVariant: 0
+  m_IsPlaceholder: 0

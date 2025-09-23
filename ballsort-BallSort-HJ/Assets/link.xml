@@ -1,0 +1,161 @@
+<linker>
+  <assembly fullname="Unity.Addressables, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" preserve="all">
+    <type fullname="UnityEngine.AddressableAssets.Addressables" preserve="all" />
+  </assembly>
+  <assembly fullname="Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" preserve="all">
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.LegacyResourcesProvider" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.AssetBundleProvider" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.BundledAssetProvider" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.AtlasSpriteProvider" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.InstanceProvider" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.SceneProvider" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.GameObject" preserve="all" />
+    <type fullname="UnityEngine.Transform" preserve="all" />
+    <type fullname="UnityEngine.Material" preserve="all" />
+    <type fullname="UnityEngine.Texture2D" preserve="all" />
+    <type fullname="UnityEngine.Shader" preserve="all" />
+    <type fullname="UnityEngine.Sprite" preserve="all" />
+    <type fullname="UnityEngine.RectTransform" preserve="all" />
+    <type fullname="UnityEngine.U2D.SpriteAtlas" preserve="all" />
+    <type fullname="UnityEngine.TextAsset" preserve="all" />
+    <type fullname="UnityEngine.MeshRenderer" preserve="all" />
+    <type fullname="UnityEngine.MeshFilter" preserve="all" />
+    <type fullname="UnityEngine.Mesh" preserve="all" />
+    <type fullname="UnityEngine.Light" preserve="all" />
+    <type fullname="UnityEngine.LineRenderer" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.AnimationClip" preserve="all" />
+    <type fullname="UnityEngine.RuntimeAnimatorController" preserve="all" />
+    <type fullname="UnityEngine.Animator" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.AudioSource" preserve="all" />
+    <type fullname="UnityEngine.AudioClip" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.IMGUIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.GUISkin" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.UI.Image" preserve="all" />
+    <type fullname="UnityEngine.UI.Text" preserve="all" />
+    <type fullname="UnityEngine.UI.Button" preserve="all" />
+    <type fullname="UnityEngine.UI.GraphicRaycaster" preserve="all" />
+    <type fullname="UnityEngine.UI.CanvasScaler" preserve="all" />
+    <type fullname="UnityEngine.UI.Outline" preserve="all" />
+    <type fullname="UnityEngine.UI.ContentSizeFitter" preserve="all" />
+    <type fullname="UnityEngine.UI.Mask" preserve="all" />
+    <type fullname="UnityEngine.UI.GridLayoutGroup" preserve="all" />
+    <type fullname="UnityEngine.UI.HorizontalLayoutGroup" preserve="all" />
+    <type fullname="UnityEngine.UI.VerticalLayoutGroup" preserve="all" />
+    <type fullname="UnityEngine.UI.ScrollRect" preserve="all" />
+  </assembly>
+  <assembly fullname="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Soybean.GameWorker.GameWorker" preserve="all" />
+    <type fullname="FpsHud" preserve="all" />
+    <type fullname="GuideUICircle" preserve="all" />
+    <type fullname="UnityNetworkManager" preserve="all" />
+    <type fullname="Reporter" preserve="all" />
+    <type fullname="DebugConsole" preserve="all" />
+    <type fullname="JobManager" preserve="all" />
+    <type fullname="BasicComponent" preserve="all" />
+    <type fullname="InGameGuideUI" preserve="all" />
+    <type fullname="FloatingWindow" preserve="all" />
+    <type fullname="WaitingMask" preserve="all" />
+    <type fullname="CoinFlyAnim" preserve="all" />
+    <type fullname="ProjectSpace.Lei31Utils.Scripts.Utils2.Dialog.DialogManager" preserve="all" />
+    <type fullname="WhiteEggTart.Terminal" preserve="all" />
+    <type fullname="VibrationManager" preserve="all" />
+    <type fullname="GroupDisplay" preserve="all" />
+    <type fullname="SoundPoint" preserve="all" />
+    <type fullname="GuideUIRect" preserve="all" />
+    <type fullname="GameHeartBeat" preserve="all" />
+    <type fullname="EditorADManager" preserve="all" />
+    <type fullname="AudioManager" preserve="all" />
+    <type fullname="OfflineTimeManager" preserve="all" />
+    <type fullname="ProjectSpace.Lei31Utils.Scripts.Utils.ServerTimeManager" preserve="all" />
+    <type fullname="GlobalEffect" preserve="all" />
+    <type fullname="ReporterMessageReceiver" preserve="all" />
+    <type fullname="TransitionManager" preserve="all" />
+    <type fullname="SmartLocalizedText" preserve="all" />
+    <type fullname="AudioClipHelper" preserve="all" />
+    <type fullname="GuideManager" preserve="all" />
+    <type fullname="DebugConsoleControl" preserve="all" />
+    <type fullname="PoolManager" preserve="all" />
+    <type fullname="TerminalOpenChecker" preserve="all" />
+    <type fullname="GuideUIConfig" preserve="all" />
+    <type fullname="ProjectSpace.BubbleMatch.Scripts.Config.AnimalIncubatorTimeConfig" preserve="all" />
+    <type fullname="EnemyConfig" preserve="all" />
+    <type fullname="PriceListConfig" preserve="all" />
+    <type fullname="LevelConfig" preserve="all" />
+    <type fullname="AwardListConfig" preserve="all" />
+    <type fullname="AnimalLevelConfig" preserve="all" />
+    <type fullname="ProjectSpace.BubbleMatch.Scripts.Config.AnimalFusionProbabilityConfig" preserve="all" />
+    <type fullname="ProjectSpace.BubbleMatch.Scripts.Config.AnimalConfig" preserve="all" />
+    <type fullname="SoyBean.IAP.IAPConfig" preserve="all" />
+    <type fullname="GoodsConfig" preserve="all" />
+    <type fullname="ProjectSpace.BubbleMatch.Scripts.Animal.Dialog.AnimalEggAnimUI" preserve="all" />
+    <type fullname="TestDialog" preserve="all" />
+    <type fullname="ProjectSpace.BubbleMatch.Scripts.LevelSelect.PageContent" preserve="all" />
+    <type fullname="ButtonTapAudio" preserve="all" />
+    <type fullname="ProjectSpace.BubbleMatch.Scripts.Animal.Dialog.AnimalIncubatorDialog" preserve="all" />
+    <type fullname="ProjectSpace.BubbleMatch.Scripts.Animal.Dialog.AnimalEggUI" preserve="all" />
+    <type fullname="ProjectSpace.BubbleMatch.Scripts.LevelSelect.LevelStage" preserve="all" />
+    <type fullname="Text2DOutline" preserve="all" />
+    <type fullname="ProjectSpace.BubbleMatch.Scripts.Animal.Dialog.AnimalInfoDialog" preserve="all" />
+    <type fullname="ProjectSpace.BubbleMatch.Scripts.LevelSelect.LevelSelectDialog" preserve="all" />
+    <type fullname="ProjectSpace.BubbleMatch.Scripts.Item.RewardItem" preserve="all" />
+    <type fullname="ProjectSpace.BubbleMatch.Scripts.Animal.Dialog.AnimalFusionDialog" preserve="all" />
+    <type fullname="ProjectSpace.BubbleMatch.Scripts.Animal.Dialog.AnimalItemUI" preserve="all" />
+    <type fullname="ProjectSpace.BubbleMatch.Scripts.LimitTimePack.GeneralReward" preserve="all" />
+    <type fullname="ProjectSpace.BubbleMatch.Scripts.Animal.Dialog.PropertyPanel" preserve="all" />
+    <type fullname="ProjectSpace.BubbleMatch.Scripts.LevelSelect.LevelInfoDialog" preserve="all" />
+    <type fullname="ProjectSpace.BubbleMatch.Scripts.Animal.Dialog.AnimalItemAnimUI" preserve="all" />
+    <type fullname="ProjectSpace.BubbleMatch.Scripts.LevelSelect.PageController" preserve="all" />
+    <type fullname="ProjectSpace.BubbleMatch.Scripts.Animal.Dialog.AnimalItemCanSelectUI" preserve="all" />
+    <type fullname="ProjectSpace.BubbleMatch.Scripts.LevelSelect.SelectAnimalDialog" preserve="all" />
+    <type fullname="SightLineItem" preserve="all" />
+    <type fullname="InGameRoleItem" preserve="all" />
+    <type fullname="ArrowItem" preserve="all" />
+    <type fullname="RaycastLine" preserve="all" />
+    <type fullname="AnimalGameItem" preserve="all" />
+    <type fullname="AnimalEffectItem" preserve="all" />
+    <type fullname="AnimalItem" preserve="all" />
+    <type fullname="ProjectSpace.BubbleMatch.Scripts.Animal.AnimalEggItem" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEditor.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEditor.MonoScript" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.Font" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.UIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.CanvasRenderer" preserve="all" />
+    <type fullname="UnityEngine.Canvas" preserve="all" />
+    <type fullname="UnityEngine.CanvasGroup" preserve="all" />
+  </assembly>
+  <assembly fullname="spine-unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Spine.Unity.SkeletonMecanim" preserve="all" />
+    <type fullname="Spine.Unity.SkeletonAnimation" preserve="all" />
+    <type fullname="Spine.Unity.SpineAtlasAsset" preserve="all" />
+    <type fullname="Spine.Unity.SkeletonDataAsset" preserve="all" />
+  </assembly>
+  <assembly fullname="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="HighlightableObject" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.Physics2DModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.Rigidbody2D" preserve="all" />
+    <type fullname="UnityEngine.CircleCollider2D" preserve="all" />
+    <type fullname="UnityEngine.PhysicsMaterial2D" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.ParticleSystem" preserve="all" />
+    <type fullname="UnityEngine.ParticleSystemRenderer" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.Rigidbody" preserve="all" />
+    <type fullname="UnityEngine.BoxCollider" preserve="all" />
+  </assembly>
+</linker>

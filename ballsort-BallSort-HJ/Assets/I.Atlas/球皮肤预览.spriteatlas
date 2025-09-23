@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: "\u7403\u76AE\u80A4\u9884\u89C8"
+  serializedVersion: 2
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 0
+      compressionQuality: 0
+      maxTextureSize: 0
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: iPhone
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 33
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 48
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: a06d8121a00a1cb4d8b35f95b927bf50, type: 3}
+    - {fileID: 2800000, guid: ecaf19166db54dc49a2c27e47308c70a, type: 3}
+    - {fileID: 2800000, guid: e76fed06b8923b64a9d60b138a689495, type: 3}
+    - {fileID: 2800000, guid: a07cdf8625c65f34b929ee7e760131d0, type: 3}
+    - {fileID: 2800000, guid: 0c7a98d10f7308b45972438eddd4b2f5, type: 3}
+    - {fileID: 2800000, guid: 0280d414672172b478bd6a59d5040012, type: 3}
+    - {fileID: 2800000, guid: 48497c37f33ecce4d98bc501daf08d44, type: 3}
+    - {fileID: 2800000, guid: 02bd0b9d157ac764cb3417b0a86fde27, type: 3}
+    - {fileID: 2800000, guid: 63b957a6622fbb34bad09d8fe98b9d38, type: 3}
+    - {fileID: 2800000, guid: 6ee4acb538b89464fa279ea21e98d711, type: 3}
+    - {fileID: 2800000, guid: 61b2166debb4e6d4f9a83efe4eae3f71, type: 3}
+    - {fileID: 2800000, guid: 542a84ebae26b714091de693a81bcea6, type: 3}
+    - {fileID: 2800000, guid: 556d1aaf702eb354e94ecb01fb60002d, type: 3}
+    - {fileID: 2800000, guid: 09f5a486543020846a18cc67facdcd2f, type: 3}
+    - {fileID: 2800000, guid: 0a0df7527a6733940ae6ca128863f1b8, type: 3}
+    - {fileID: 2800000, guid: 5d6663fa542724c4a94e106edab4d98e, type: 3}
+    - {fileID: 2800000, guid: 3ac41d1c2bee58b46b62f2f82c0b6b51, type: 3}
+    - {fileID: 2800000, guid: ab694c5ea760dae4eaad1ab2060ad029, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites: []
+  m_PackedSpriteNamesToIndex: []
+  m_RenderDataMap: {}
+  m_Tag: "\u7403\u76AE\u80A4\u9884\u89C8"
+  m_IsVariant: 0
+  m_IsPlaceholder: 0

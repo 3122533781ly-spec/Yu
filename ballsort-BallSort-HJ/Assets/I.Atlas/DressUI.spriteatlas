@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DressUI
+  serializedVersion: 2
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 0
+      compressionQuality: 0
+      maxTextureSize: 0
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: iPhone
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 33
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 48
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 0e06519ee514ab245bbaae5b871c9b62, type: 3}
+    - {fileID: 2800000, guid: 9a854e12997706344b61e5e776ce2743, type: 3}
+    - {fileID: 2800000, guid: 3951cecb0928c0f4e8cb3151c29437b6, type: 3}
+    - {fileID: 2800000, guid: 1a099c84bea923641ad6c4c3d42989d9, type: 3}
+    - {fileID: 2800000, guid: 406ab0ad97df20f48ad850c313134637, type: 3}
+    - {fileID: 2800000, guid: 59fc70a50046221458c79a3cbbe49808, type: 3}
+    - {fileID: 2800000, guid: 29f5bbedf71057e40abf822a17d3209f, type: 3}
+    - {fileID: 2800000, guid: d763e0ff40a463e4aba486501d87b16e, type: 3}
+    - {fileID: 2800000, guid: 73da0b8db41b0bf4f8472c76184cf60f, type: 3}
+    - {fileID: 2800000, guid: 22bbd5333a7c399448cddeefbee8da04, type: 3}
+    - {fileID: 2800000, guid: 3f44d0adfd170b943a0e867595ed6d5a, type: 3}
+    - {fileID: 2800000, guid: 613e6b612dd1a49458421dcedbb02fd0, type: 3}
+    - {fileID: 2800000, guid: f159581d112007841bea22ae2073d787, type: 3}
+    - {fileID: 2800000, guid: 493911b050e0a7e42a914eb3f0925dd3, type: 3}
+    - {fileID: 2800000, guid: 8f9236ac93b19e947a0006edd066b0b0, type: 3}
+    - {fileID: 2800000, guid: d4d9ecb219352074085f37de17b3627a, type: 3}
+    - {fileID: 2800000, guid: fc096916733d497428fee5525dafd53e, type: 3}
+    - {fileID: 2800000, guid: 7e885a613316d8140bc8a447f403c625, type: 3}
+    - {fileID: 2800000, guid: 5d85087e553f3ff43987caefba181887, type: 3}
+    - {fileID: 2800000, guid: 80b79bf410026c649ae6c1784ea875c8, type: 3}
+    - {fileID: 2800000, guid: c1f4d99ce237c6846a0db6cc411e2a33, type: 3}
+    - {fileID: 2800000, guid: 014a4ce802daacc46bf9059f7a6f2b11, type: 3}
+    - {fileID: 2800000, guid: dd8825ec463b8f445b90cfe97af26d3f, type: 3}
+    - {fileID: 2800000, guid: b60b7f044255bcd4da302227d3867d3e, type: 3}
+    - {fileID: 2800000, guid: 1663abd87059b2f47b75f28b56bc3473, type: 3}
+    - {fileID: 2800000, guid: 4c53f39a44e988843809d3adf9418e9b, type: 3}
+    - {fileID: 2800000, guid: d84e32114379a6140a093f0a68e9a11c, type: 3}
+    - {fileID: 2800000, guid: b1ff3a0a67fcdfb4ca688f7510f7d7fc, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites: []
+  m_PackedSpriteNamesToIndex: []
+  m_RenderDataMap: {}
+  m_Tag: DressUI
+  m_IsVariant: 0
+  m_IsPlaceholder: 0

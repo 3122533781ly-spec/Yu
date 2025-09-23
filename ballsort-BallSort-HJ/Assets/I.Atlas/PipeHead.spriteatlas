@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PipeHead
+  serializedVersion: 2
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 0
+      compressionQuality: 0
+      maxTextureSize: 0
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: iPhone
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 33
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 48
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 504bbe2e37d29dc468d625fe2b80ab02, type: 3}
+    - {fileID: 2800000, guid: 5c566823f4170564a9f95660e2f14628, type: 3}
+    - {fileID: 2800000, guid: 63c95539c7d386344951c836a5752325, type: 3}
+    - {fileID: 2800000, guid: 0cf4097344b10c34dbce9ee6e53c0041, type: 3}
+    - {fileID: 2800000, guid: 31389dfe8cb3f0a44909258a7fc6c6e8, type: 3}
+    - {fileID: 2800000, guid: c6119161a49691a41bcc677f7a380a78, type: 3}
+    - {fileID: 2800000, guid: 361b2a6d3c5a2fc4f9c65dc603eae407, type: 3}
+    - {fileID: 2800000, guid: 38e5e90dcb40054439275e7226327779, type: 3}
+    - {fileID: 2800000, guid: 74f422e8f390b664a9742d5c3a114faa, type: 3}
+    - {fileID: 2800000, guid: 1cb621aa590899b47ab59790d7f69d55, type: 3}
+    - {fileID: 2800000, guid: d43484fc67c7932418a12f2cb5cafa56, type: 3}
+    - {fileID: 2800000, guid: d5b0707586cd62848af8807f4cfaddbb, type: 3}
+    - {fileID: 2800000, guid: 73925eaa0ccba974dbfbdab42be8e18f, type: 3}
+    - {fileID: 2800000, guid: a294640b42b9d51438250b5e91eaa45f, type: 3}
+    - {fileID: 2800000, guid: 67c6b5f35f2260f4ea58983ad1974084, type: 3}
+    - {fileID: 2800000, guid: d062b771b04080049a9caf5a60828fcb, type: 3}
+    - {fileID: 2800000, guid: 48701db43e09201409a0634a57f88944, type: 3}
+    - {fileID: 2800000, guid: 73084e161efe64842baf40d249b49294, type: 3}
+    - {fileID: 2800000, guid: c4bc3f522548ac14caca483ada45ac98, type: 3}
+    - {fileID: 2800000, guid: d96c1e16b020c734f983fd36d7dc980c, type: 3}
+    - {fileID: 2800000, guid: 0e23f8e391402884d8f5686fdeb9e3b4, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites: []
+  m_PackedSpriteNamesToIndex: []
+  m_RenderDataMap: {}
+  m_Tag: PipeHead
+  m_IsVariant: 0
+  m_IsPlaceholder: 0

@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49badfd9083dd804381b2e4308bbb300, type: 3}
+  m_Name: SkinDataList_SO
+  m_EditorClassIdentifier: 
+  Skins:
+  - tube: {fileID: 21300000, guid: 6261c3991fa007f43b585a70eb919340, type: 3}
+    ballIcon:
+    - {fileID: 21300000, guid: 1813ad531511d1d4987f055a83a0f957, type: 3}
+    - {fileID: 21300000, guid: 2f4bc83c7ead4a0438593be378a0b210, type: 3}
+    - {fileID: 21300000, guid: 0fb101f5a8b2d9e4bac23ffc8a60fb8f, type: 3}
+    - {fileID: 21300000, guid: e947fd7a7a1ff8843a4f659cf7e1d764, type: 3}
+    - {fileID: 21300000, guid: 06be55122b166f94eb9dba43ca7a904c, type: 3}
+    - {fileID: 21300000, guid: fb6f871c3952dd5449c1038b12678456, type: 3}
+    - {fileID: 21300000, guid: daebc845a1943aa4baa02bab368e058b, type: 3}
+    - {fileID: 21300000, guid: ef9e44ce3600fa5488eb0542724bba93, type: 3}
+    - {fileID: 21300000, guid: 9cba56d9de6438149810774ae493e4ad, type: 3}
+    bgIcon: {fileID: 21300000, guid: dd220b91e359e5040bcec8b19bf0d59f, type: 3}
+    color: {r: 0.87058824, g: 0.2901961, b: 0.05882353, a: 1}
+    MysteriousBall: {fileID: 21300000, guid: 2be9db1581597ce48a1bab2fb5cb145f, type: 3}
+  - tube: {fileID: 21300000, guid: 6261c3991fa007f43b585a70eb919340, type: 3}
+    ballIcon:
+    - {fileID: 21300000, guid: a93e6f8d397eb7e49b43a8f7ab7b6721, type: 3}
+    - {fileID: 21300000, guid: ebbd3e52412dfc9489dbd80abf2c10c6, type: 3}
+    - {fileID: 21300000, guid: 60c4c2c48b10cc340a1342a2b224c326, type: 3}
+    - {fileID: 21300000, guid: d63b13837d1ebf44c8d9460fd69ad802, type: 3}
+    - {fileID: 21300000, guid: 5444185042024a4448d1af514291516e, type: 3}
+    - {fileID: 21300000, guid: 2dcc816cf780e204180019f49c9e76bb, type: 3}
+    - {fileID: 21300000, guid: 8f31464153c028e4dbf6ad61084a82f4, type: 3}
+    - {fileID: 21300000, guid: 69b4b4baee3e7384ea5a804052d9dd47, type: 3}
+    - {fileID: 21300000, guid: 73eafabb6d342914e8bbc485e38ca316, type: 3}
+    bgIcon: {fileID: 21300000, guid: d0dabbb56e7ca344f84da77bb6b606f6, type: 3}
+    color: {r: 0.98039216, g: 0.25882354, b: 0.28235295, a: 1}
+    MysteriousBall: {fileID: 21300000, guid: 0084aa033d5f09e4ba0404e706c86ea0, type: 3}
+  - tube: {fileID: 21300000, guid: b73efc9b282064a469da9d5c070e61a4, type: 3}
+    ballIcon:
+    - {fileID: 21300000, guid: 7e1f37bbcd596d146a6946fbd4c5393d, type: 3}
+    - {fileID: 21300000, guid: acf0087c74f3ca643aa98fc8a8cf5620, type: 3}
+    - {fileID: 21300000, guid: 1ff40907cc809f844b42be3a4dc2c51b, type: 3}
+    - {fileID: 21300000, guid: 450ebbe68875ee84eab9e8ef6201d901, type: 3}
+    - {fileID: 21300000, guid: 41cc6f6c294f4a841bd2955ccc2dab51, type: 3}
+    - {fileID: 21300000, guid: 536dd4cbb4e509741aea5ab2b838ef96, type: 3}
+    - {fileID: 21300000, guid: a5384c619f3c3c048b46516f2be8ab3d, type: 3}
+    - {fileID: 21300000, guid: 12b9cec0d5a237e4fa02f68629c0d910, type: 3}
+    - {fileID: 21300000, guid: 12c9ac971bedb7a4390bc28b0a9d709d, type: 3}
+    bgIcon: {fileID: 21300000, guid: bc01e73f7ef4c8e4dbdfdb8aba136fb4, type: 3}
+    color: {r: 0.9490196, g: 0.05882353, b: 0.06666667, a: 1}
+    MysteriousBall: {fileID: 21300000, guid: f7f023d5363eb7c4daa25ee4d2da669c, type: 3}
+  - tube: {fileID: 21300000, guid: 2f705b673dce1644593a8a2e974a6d68, type: 3}
+    ballIcon:
+    - {fileID: 21300000, guid: 7a40d610c504542418e30cc5eabe6122, type: 3}
+    - {fileID: 21300000, guid: 1c6a0939dab0cac4d93928bfaf192716, type: 3}
+    - {fileID: 21300000, guid: 857cf46a21b91df4d938caed4431a58e, type: 3}
+    - {fileID: 21300000, guid: 4c56a770f4b3379439209b0b2c2dac2c, type: 3}
+    - {fileID: 21300000, guid: df6dcd1b4ea0a6449bcc953e603d444c, type: 3}
+    - {fileID: 21300000, guid: 57366eb9d0c4f4d4986b6adedf607568, type: 3}
+    - {fileID: 21300000, guid: 6c6bac46fe501c046b0f57b1d33099b9, type: 3}
+    - {fileID: 21300000, guid: abf6442309f880e44a48c8af65610220, type: 3}
+    - {fileID: 21300000, guid: 04f7e55c6430df74d872c21b39489d01, type: 3}
+    bgIcon: {fileID: 21300000, guid: d449175fa88350e40afc6f97b2a5152b, type: 3}
+    color: {r: 1, g: 0.08627451, b: 0.023529412, a: 1}
+    MysteriousBall: {fileID: 21300000, guid: e86fa8635d46142498be729e8ebe0c12, type: 3}
+  - tube: {fileID: 21300000, guid: 22dfe92389f85b54eba2f4e21e33b03c, type: 3}
+    ballIcon:
+    - {fileID: 21300000, guid: 58a2c2f5b4a39794da7d2b189ab8fa6b, type: 3}
+    - {fileID: 21300000, guid: 7d1afeb875073514b9afcb6010f70a9c, type: 3}
+    - {fileID: 21300000, guid: b900ca62e0e0a8848b036f80db05ff03, type: 3}
+    - {fileID: 21300000, guid: ae96c6df1242dcb46a52c289955035cc, type: 3}
+    - {fileID: 21300000, guid: aeadc594b5e9f4b428317d09f9dd8ab3, type: 3}
+    - {fileID: 21300000, guid: 82c828e0f1d802c43a4232650727740b, type: 3}
+    - {fileID: 21300000, guid: b3347e569708ec647b8efae6ab35f774, type: 3}
+    - {fileID: 21300000, guid: 37c3309ab91974044b0a5d0b28011c08, type: 3}
+    - {fileID: 21300000, guid: 595c7d9135ff8d840aaa3262c38822c5, type: 3}
+    bgIcon: {fileID: 21300000, guid: 6ef6fd562cf0e4546afa5cecd812603f, type: 3}
+    color: {r: 1, g: 0.09803922, b: 0.19607843, a: 1}
+    MysteriousBall: {fileID: 21300000, guid: 2835a7a660bd76f449b6460a3767a4db, type: 3}
+  - tube: {fileID: 21300000, guid: aade01215114dbb4782c3f8da097ac34, type: 3}
+    ballIcon:
+    - {fileID: 21300000, guid: f2717a88d5ec1364db0282c4fe004f11, type: 3}
+    - {fileID: 21300000, guid: f6298db64619fa14eaddbc6e1856c780, type: 3}
+    - {fileID: 21300000, guid: 9dd00a838030f4d498c2c78b8ca50aa2, type: 3}
+    - {fileID: 21300000, guid: a349791040f376b4484d097d924e3824, type: 3}
+    - {fileID: 21300000, guid: 185d4c4f0027d3646af215d88fc035f4, type: 3}
+    - {fileID: 21300000, guid: 55837e4d10cee0b418c025861569564a, type: 3}
+    - {fileID: 21300000, guid: e2cebcb44a01ced479d654fce8c8489d, type: 3}
+    - {fileID: 21300000, guid: 0abdac71e2d7e7a4894cec35944eb127, type: 3}
+    - {fileID: 21300000, guid: 63539a5616521194fb89dc7a644232ec, type: 3}
+    bgIcon: {fileID: 21300000, guid: 20104ff494b2c204ca4cc7a2bd204a5f, type: 3}
+    color: {r: 1, g: 0.50980395, b: 0.6666667, a: 1}
+    MysteriousBall: {fileID: 21300000, guid: b3a68110fd55c5e49944502149c4c7b2, type: 3}
+  - tube: {fileID: 21300000, guid: eb15d71d5ca9a7f45a251de98b4caf26, type: 3}
+    ballIcon: []
+    bgIcon: {fileID: 21300000, guid: 86e38899f6feaf541aa1f53acdafcb63, type: 3}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    MysteriousBall: {fileID: 0}
+  - tube: {fileID: 0}
+    ballIcon: []
+    bgIcon: {fileID: 21300000, guid: 32f5d454546dfdd45b582f88f75805b1, type: 3}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    MysteriousBall: {fileID: 0}

@@ -1,0 +1,175 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63249e4fe66f1b642ac06128f2d90c50, type: 3}
+  m_Name: LevelDataConfig
+  m_EditorClassIdentifier: 
+  _configs:
+  - IntID: 1
+    BoardID: 2
+  - IntID: 2
+    BoardID: 3
+  - IntID: 3
+    BoardID: 4
+  - IntID: 4
+    BoardID: 5
+  - IntID: 5
+    BoardID: 1
+  - IntID: 6
+    BoardID: 6
+  - IntID: 7
+    BoardID: 7
+  - IntID: 8
+    BoardID: 8
+  - IntID: 9
+    BoardID: 9
+  - IntID: 10
+    BoardID: 20
+  - IntID: 11
+    BoardID: 11
+  - IntID: 12
+    BoardID: 12
+  - IntID: 13
+    BoardID: 13
+  - IntID: 14
+    BoardID: 14
+  - IntID: 15
+    BoardID: 15
+  - IntID: 16
+    BoardID: 16
+  - IntID: 17
+    BoardID: 17
+  - IntID: 18
+    BoardID: 18
+  - IntID: 19
+    BoardID: 19
+  - IntID: 20
+    BoardID: 10
+  - IntID: 21
+    BoardID: 21
+  - IntID: 22
+    BoardID: 22
+  - IntID: 23
+    BoardID: 23
+  - IntID: 24
+    BoardID: 24
+  - IntID: 25
+    BoardID: 25
+  - IntID: 26
+    BoardID: 26
+  - IntID: 27
+    BoardID: 27
+  - IntID: 28
+    BoardID: 28
+  - IntID: 29
+    BoardID: 29
+  - IntID: 30
+    BoardID: 30
+  - IntID: 31
+    BoardID: 31
+  - IntID: 32
+    BoardID: 32
+  - IntID: 33
+    BoardID: 33
+  - IntID: 34
+    BoardID: 34
+  - IntID: 35
+    BoardID: 35
+  - IntID: 36
+    BoardID: 36
+  - IntID: 37
+    BoardID: 37
+  - IntID: 38
+    BoardID: 38
+  - IntID: 39
+    BoardID: 39
+  - IntID: 40
+    BoardID: 40
+  - IntID: 41
+    BoardID: 41
+  - IntID: 42
+    BoardID: 42
+  - IntID: 43
+    BoardID: 43
+  - IntID: 44
+    BoardID: 44
+  - IntID: 45
+    BoardID: 45
+  - IntID: 46
+    BoardID: 46
+  - IntID: 47
+    BoardID: 47
+  - IntID: 48
+    BoardID: 48
+  - IntID: 49
+    BoardID: 49
+  - IntID: 50
+    BoardID: 50
+  - IntID: 51
+    BoardID: 51
+  - IntID: 52
+    BoardID: 52
+  - IntID: 53
+    BoardID: 53
+  - IntID: 54
+    BoardID: 54
+  - IntID: 55
+    BoardID: 55
+  - IntID: 56
+    BoardID: 56
+  - IntID: 57
+    BoardID: 57
+  - IntID: 58
+    BoardID: 58
+  - IntID: 59
+    BoardID: 59
+  - IntID: 60
+    BoardID: 60
+  - IntID: 61
+    BoardID: 61
+  - IntID: 62
+    BoardID: 62
+  - IntID: 63
+    BoardID: 63
+  - IntID: 64
+    BoardID: 64
+  - IntID: 65
+    BoardID: 65
+  - IntID: 66
+    BoardID: 66
+  - IntID: 67
+    BoardID: 67
+  - IntID: 68
+    BoardID: 68
+  - IntID: 69
+    BoardID: 69
+  - IntID: 70
+    BoardID: 70
+  - IntID: 71
+    BoardID: 71
+  - IntID: 72
+    BoardID: 72
+  - IntID: 73
+    BoardID: 73
+  - IntID: 74
+    BoardID: 74
+  - IntID: 75
+    BoardID: 75
+  - IntID: 76
+    BoardID: 76
+  - IntID: 77
+    BoardID: 77
+  - IntID: 78
+    BoardID: 78
+  - IntID: 79
+    BoardID: 79
+  - IntID: 80
+    BoardID: 80

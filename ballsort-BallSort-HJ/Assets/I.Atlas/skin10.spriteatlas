@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: skin10
+  serializedVersion: 2
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 0
+      compressionQuality: 0
+      maxTextureSize: 0
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: iPhone
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 33
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 48
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: e84f7fe7bf4b61f4e82a0640fc09c532, type: 3}
+    - {fileID: 2800000, guid: 2dbdbe152f9fa4043beb1f1e3cdb1a27, type: 3}
+    - {fileID: 2800000, guid: a13da53b49d829d4a9b943fee428981e, type: 3}
+    - {fileID: 2800000, guid: 7c167bb4137fe6a4c9c585ae499572bc, type: 3}
+    - {fileID: 2800000, guid: 7166474541597e24cae705b97f0691e5, type: 3}
+    - {fileID: 2800000, guid: 4cf48660311c13042b1adf5ef3f5441e, type: 3}
+    - {fileID: 2800000, guid: 3b30587840d1ae1468f1f23775657e23, type: 3}
+    - {fileID: 2800000, guid: 8ed0c38d60f56344282087b1cfe91162, type: 3}
+    - {fileID: 2800000, guid: 2742532ec5fd8cc4ca77ea37370ee606, type: 3}
+    - {fileID: 2800000, guid: 67f7a561f71fa6e488f98159ec89abf8, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites: []
+  m_PackedSpriteNamesToIndex: []
+  m_RenderDataMap: {}
+  m_Tag: skin10
+  m_IsVariant: 0
+  m_IsPlaceholder: 0

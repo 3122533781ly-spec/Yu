@@ -1,0 +1,104 @@
+
+宝箱动画.png
+size: 528,536
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+L2
+  rotate: true
+  xy: 311, 115
+  size: 100, 99
+  orig: 100, 99
+  offset: 0, 0
+  index: -1
+L3
+  rotate: true
+  xy: 316, 13
+  size: 100, 99
+  orig: 100, 99
+  offset: 0, 0
+  index: -1
+bag
+  rotate: false
+  xy: 417, 23
+  size: 92, 94
+  orig: 94, 95
+  offset: 1, 0
+  index: -1
+faguang
+  rotate: false
+  xy: 181, 22
+  size: 133, 75
+  orig: 133, 83
+  offset: 0, 3
+  index: -1
+gz1
+  rotate: true
+  xy: 2, 285
+  size: 249, 152
+  orig: 250, 154
+  offset: 0, 1
+  index: -1
+gz2
+  rotate: true
+  xy: 301, 335
+  size: 199, 119
+  orig: 200, 121
+  offset: 0, 1
+  index: -1
+light1
+  rotate: true
+  xy: 412, 119
+  size: 96, 94
+  orig: 99, 97
+  offset: 1, 3
+  index: -1
+light_
+  rotate: false
+  xy: 2, 99
+  size: 184, 184
+  orig: 199, 201
+  offset: 8, 9
+  index: -1
+money
+  rotate: true
+  xy: 422, 406
+  size: 128, 103
+  orig: 128, 103
+  offset: 0, 0
+  index: -1
+shoe
+  rotate: false
+  xy: 2, 2
+  size: 177, 95
+  orig: 179, 97
+  offset: 1, 1
+  index: -1
+wu1
+  rotate: false
+  xy: 311, 217
+  size: 150, 116
+  orig: 150, 116
+  offset: 0, 0
+  index: -1
+wu2
+  rotate: true
+  xy: 156, 304
+  size: 230, 143
+  orig: 230, 143
+  offset: 0, 0
+  index: -1
+xz1
+  rotate: true
+  xy: 188, 99
+  size: 203, 121
+  orig: 204, 122
+  offset: 0, 1
+  index: -1
+xz2
+  rotate: false
+  xy: 422, 355
+  size: 100, 49
+  orig: 100, 49
+  offset: 0, 0
+  index: -1

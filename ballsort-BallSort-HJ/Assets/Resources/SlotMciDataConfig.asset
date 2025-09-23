@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12edbde7911713e47b168e4083d86bdf, type: 3}
+  m_Name: SlotMciDataConfig
+  m_EditorClassIdentifier: 
+  _configs:
+  - id: 1
+    goodsId: 14
+    goodType: 14
+    goodSubtype: 0
+    probability: 22
+    count: 0
+    rateAmount: 0.015
+    poolId: 1
+  - id: 2
+    goodsId: 14
+    goodType: 14
+    goodSubtype: 0
+    probability: 16
+    count: 0
+    rateAmount: 0.025
+    poolId: 1
+  - id: 3
+    goodsId: 14
+    goodType: 14
+    goodSubtype: 0
+    probability: 15
+    count: 0
+    rateAmount: 0.015
+    poolId: 1
+  - id: 4
+    goodsId: 14
+    goodType: 14
+    goodSubtype: 0
+    probability: 10
+    count: 0
+    rateAmount: 0.02
+    poolId: 1
+  - id: 5
+    goodsId: 401
+    goodType: 4
+    goodSubtype: 1
+    probability: 7
+    count: 1
+    rateAmount: 0
+    poolId: 1
+  - id: 6
+    goodsId: 402
+    goodType: 4
+    goodSubtype: 2
+    probability: 5
+    count: 1
+    rateAmount: 0
+    poolId: 1
+  - id: 7
+    goodsId: 0
+    goodType: 0
+    goodSubtype: 0
+    probability: 25
+    count: 20
+    rateAmount: 0
+    poolId: 1
+  - id: 8
+    goodsId: 13
+    goodType: 13
+    goodSubtype: 0
+    probability: 55
+    count: 1
+    rateAmount: 0
+    poolId: 2
+  - id: 9
+    goodsId: 401
+    goodType: 4
+    goodSubtype: 1
+    probability: 10
+    count: 1
+    rateAmount: 0
+    poolId: 2
+  - id: 10
+    goodsId: 402
+    goodType: 4
+    goodSubtype: 2
+    probability: 5
+    count: 1
+    rateAmount: 0
+    poolId: 2
+  - id: 11
+    goodsId: 0
+    goodType: 0
+    goodSubtype: 0
+    probability: 30
+    count: 20
+    rateAmount: 0
+    poolId: 2
+  - id: 12
+    goodsId: 14
+    goodType: 14
+    goodSubtype: 0
+    probability: 0
+    count: 0
+    rateAmount: 0
+    poolId: 2
