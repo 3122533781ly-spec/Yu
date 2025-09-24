@@ -31,7 +31,8 @@ public class SwitchToggle : MonoBehaviour
     {
         IsOn = isOn;
 
-        _toggleToy.DOAnchorPos(new Vector2(IsOn ? _onX : _offX, _toggleToy.anchoredPosition.y), _moveDuration)
+        // 核心修改：将 x 轴改为 y 轴，使用 _onY/_offY 控制上下位置
+        _toggleToy.DOAnchorPos(new Vector2(_toggleToy.anchoredPosition.x, IsOn ? _onY : _offY), _moveDuration)
             .OnComplete(() =>
             {
                 SetImageState();
@@ -41,18 +42,22 @@ public class SwitchToggle : MonoBehaviour
     private void ClickButton()
     {
         IsOn = !IsOn;
-        _toggleToy.DOAnchorPos(new Vector2(IsOn ? _onX : _offX, _toggleToy.anchoredPosition.y), _moveDuration)
+
+        // 同样修改：x 轴不变，只改 y 轴
+        _toggleToy.DOAnchorPos(new Vector2(_toggleToy.anchoredPosition.x, IsOn ? _onY : _offY), _moveDuration)
             .OnComplete(() =>
             {
                 SetImageState();
                 OnValueChange.Invoke(IsOn);
-                // Debug.Log(IsOn);
             });
     }
 
     private void SetImageState()
     {
         _onImage.gameObject.SetActive(IsOn);
+        if(IsOn)
+        _toggleToy.gameObject.GetComponent<Image>().sprite = Toy1;
+        else _toggleToy.gameObject.GetComponent<Image>().sprite = Toy2;
         _offImage.gameObject.SetActive(!IsOn);
     }
 
@@ -60,7 +65,9 @@ public class SwitchToggle : MonoBehaviour
     [SerializeField] private RectTransform _toggleToy = null;
     [SerializeField] private Image _onImage = null;
     [SerializeField] private Image _offImage = null;
-    [SerializeField] private float _onX = -1;
-    [SerializeField] private float _offX = 1;
+    [SerializeField] private float _onY;   // 打开时的 y 轴位置
+    [SerializeField] private float _offY;  // 关闭时的 y 轴位置
     [SerializeField] private float _moveDuration = 0.5f;
+    [SerializeField] private Sprite Toy1;
+    [SerializeField] private Sprite Toy2;
 }

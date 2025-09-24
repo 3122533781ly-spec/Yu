@@ -72,6 +72,7 @@ namespace _02.Scripts.InGame.UI
             if (_ballData != null)
             {
                 icon.sprite = SpriteManager.Instance.GetBallIcon(_isBlackBall, _ballData.type);
+                icon.SetNativeSize();
             }
             // gameObject.transform.localScale = new Vector3(1, _isBlackBall ? -1 : 1, 1);
         }

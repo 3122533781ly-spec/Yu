@@ -8,7 +8,7 @@ using _02.Scripts.InGame;
 
 public class OptionDialog : Dialog
 {
-    [SerializeField] private ToggleButton toggleSounds;
+    [SerializeField] private SwitchToggle toggleSounds;
     [SerializeField] private ToggleButton toggleShake;
 
     [SerializeField] protected Button closeBtn;
@@ -40,7 +40,7 @@ public class OptionDialog : Dialog
     private void OnEnable()
     {
         //maskBG.sprite = InGameManager.Instance.bg.sprite;
-        toggleSounds.OnChange += ToggleSoundChange;
+        toggleSounds.OnValueChange += ToggleSoundChange;
         toggleShake.OnChange += ToggleShakeChange;
         termOfUseBtn.onClick.AddListener(ClickTermsButton);
         privacyPolicyBtn.onClick.AddListener(ClickPrivacyButton);
@@ -51,7 +51,7 @@ public class OptionDialog : Dialog
 
     private void OnDisable()
     {
-        toggleSounds.OnChange -= ToggleSoundChange;
+        toggleSounds.OnValueChange -= ToggleSoundChange;
         toggleShake.OnChange -= ToggleShakeChange;
 
         closeBtn.onClick.RemoveListener(CloseMenuBtn);
@@ -112,7 +112,7 @@ public class OptionDialog : Dialog
         AudioClipHelper.Instance.PlayButtonTap();
     }
 
-    private void ToggleSoundChange(bool isOn, ToggleButton arg2)
+    private void ToggleSoundChange(bool isOn)
     {
         AudioManager.Instance.Model.IsSoundOpen = isOn;
         AudioManager.Instance.Model.IsBgmOpen = isOn;

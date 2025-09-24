@@ -151,9 +151,6 @@ namespace _02.Scripts.InGame.Controller
                 ballUI.SetPushAnime(sequence);
                 var bottomPosition = emptyRectTransform.position;
 
-                // 删除错误的状态重置
-                // _context.GetController<InGameMatchController>().SetPushIsAnime(false);
-
                 if (_popPipeUI != pushPipeUI && !_isStartTwoAnime)
                 {
                     _popPipeUI.CheckTop();
@@ -163,7 +160,8 @@ namespace _02.Scripts.InGame.Controller
                 sequence.Append(ballUI.transform.DOMove(bottomPosition, dropSpeed * timeScale))
                     .OnComplete(() =>
                     {
-                        ballUI.transform.SetParent(pushPipeUI.gridLayoutGroup.transform);
+                        // 【核心修改】将球的父对象设置为垂直布局组而非网格布局组
+                        ballUI.transform.SetParent(pushPipeUI.ballVerticalLayout.transform);
                         ballUI.SetPushAnime(null);
                         pushPipeUI.TriggerFullEff();
                         Context.CheckIsOver();
@@ -197,7 +195,7 @@ namespace _02.Scripts.InGame.Controller
         }
 
         /// <summary>
-        ///
+        /// 球飞到顶部位置的动画
         /// </summary>
         /// <param name="inGamePipeUI"></param>
         /// <param name="popBall"></param>

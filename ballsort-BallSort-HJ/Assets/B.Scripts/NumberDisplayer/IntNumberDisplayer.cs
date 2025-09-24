@@ -36,8 +36,8 @@ public class IntNumberDisplayer : MonoBehaviour, Prime31.IObjectInspectable
         {
             HandleOldAnim();
             ShowLight();
-            _currentCoroutine =
-                StartCoroutine(TextPlusAnim(oldValue, newValue, _config.GetIntSpeedData(DisplaySpeedType.Slow)));
+            //_currentCoroutine =
+            //    StartCoroutine(TextPlusAnim(oldValue, newValue, _config.GetIntSpeedData(DisplaySpeedType.Slow)));
         }
     }
 
