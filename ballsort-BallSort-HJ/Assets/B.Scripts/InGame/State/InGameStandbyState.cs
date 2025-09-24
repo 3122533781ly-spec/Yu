@@ -10,7 +10,6 @@ public class InGameStandbyState : SKState<InGame>
         StaticModule.GameFlow_EnterGame();
         HandleStatic();
         HandleComponent();
-
         // _context.GetController<InGameMapController>().SetLevelData();
         //_context.GetController<InGameBoardController>().CheckMap();
         //_context.GetView<InGameLoseGameUI>().ResetWatchAD();

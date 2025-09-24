@@ -8,8 +8,9 @@ using ProjectSpace.Lei31Utils.Scripts.Framework.App;
 using ProjectSpace.Lei31Utils.Scripts.Utils2.Dialog;
 using ProjectSpace.WangZ.Scripts.InGame;
 using Sirenix.OdinInspector;
+using System.Collections.Generic;
 using UnityEngine;
-
+using _02.Scripts.LevelEdit;
 public class InGame : GenericSceneElement<InGame, InGameState>, Prime31.IObjectInspectable
 {
     public InGameModel CellMapModel { private set; get; }
@@ -177,10 +178,62 @@ public class InGame : GenericSceneElement<InGame, InGameState>, Prime31.IObjectI
         }
     }
 
+    /// <summary>
+    /// 修改后：完成度 =（已完成的球种类数 / 总球种类数）× 100%
+    /// 已完成的球种类：至少有一个管子“装满且同色”的球类型
+    /// 总球种类：当前关卡中所有独特的球类型
+    /// </summary>
+    public float GetCompletionRate()
+    {
+        // 1. 防护：管子列表为空或无效时，返回0%
+        if (CellMapModel == null || CellMapModel.LevelPipeList == null || CellMapModel.LevelPipeList.Count <= 0)
+        {
+            return 0f;
+        }
+
+        // 2. 统计“总球种类数”（去重）和“已完成的球种类数”
+        HashSet<BallType> allBallTypes = new HashSet<BallType>(); // 所有独特的球类型
+        HashSet<BallType> completedBallTypes = new HashSet<BallType>(); // 已完成的球类型（有管子装满同色）
+
+        foreach (var pipe in CellMapModel.LevelPipeList)
+        {
+            if (pipe == null) continue; // 跳过空管子
+
+            // 2.1 收集当前管子中的所有球类型，统计“总球种类”
+            foreach (var ball in pipe.BallLevelEdits)
+            {
+                if (ball != null)
+                {
+                    BallType currentType = ball.GetBallData().type;
+                    allBallTypes.Add(currentType); // HashSet自动去重
+                }
+            }
+
+            // 2.2 若管子“装满且同色”（完成状态），收集该球类型到“已完成种类”
+            if (pipe.PipeFullOrEmpty() && pipe.BallLevelEdits.Count > 0)
+            {
+                BallType completedType = pipe.BallLevelEdits.Peek().GetBallData().type;
+                completedBallTypes.Add(completedType);
+            }
+        }
+
+        // 3. 防护：总球种类为0时（无球关卡），返回0%（避免除以0）
+        int totalBallTypeCount = allBallTypes.Count;
+        if (totalBallTypeCount <= 0)
+        {
+            return 0f;
+        }
+
+        // 4. 计算完成度（四舍五入保留1位小数）
+        float completionRate = (float)completedBallTypes.Count / totalBallTypeCount * 100f;
+        return Mathf.Round(completionRate * 10f) / 10f;
+    }
+
     public void CheckIsOver()
     {
         var levelData = CellMapModel.LevelPipeList;
         var isOver = levelData.Find(x => !x.PipeFullOrEmpty()) == null;
+        Debug.Log("当前进度为" + GetCompletionRate() + "%"); // 补充百分号，显示更直观
         if (isOver)
         {
             Win();

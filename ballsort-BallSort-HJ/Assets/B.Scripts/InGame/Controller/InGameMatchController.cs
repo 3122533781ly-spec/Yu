@@ -165,6 +165,7 @@ namespace _02.Scripts.InGame.Controller
                         ballUI.SetPushAnime(null);
                         pushPipeUI.TriggerFullEff();
                         Context.CheckIsOver();
+                        Context.GetView<InGamePlayingUI>().SetBar();
                         AddPlayStep(popPipe, pushPipeUI);
                         _isCoercion = false;
                         _isStartTwoAnime = false;
@@ -176,6 +177,7 @@ namespace _02.Scripts.InGame.Controller
                         ballUI.SetPushAnime(null);
                         pushPipeUI.TriggerFullEff();
                         Context.CheckIsOver();
+                        Context.GetView<InGamePlayingUI>().SetBar();
                         SetIsDropAnime(false);
                         SetPushIsAnime(false); // 在动画被取消时也重置状态
                     });

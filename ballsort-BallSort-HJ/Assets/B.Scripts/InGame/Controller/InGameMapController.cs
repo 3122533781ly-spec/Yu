@@ -175,12 +175,12 @@ namespace _02.Scripts.InGame.Controller
             //管子属性配置
             var pipeConfig = UtilClass.GetSizeFitter(Context.CellMapModel.LevelData.pipeNumber, pipeCapacity);
             //设置管子间上下左右间距
-            GameStage.Instance.spawnPanel.spacing = pipeConfig.pipeHSpace;
+           // GameStage.Instance.spawnPanel.spacing = pipeConfig.pipeHSpace;
             float spacing = pipeConfig.pipeWSpace - pipeConfig.pipeW;
             var pipeCount = (int)Context.CellMapModel.LevelData.pipeNumber;
             InGameManager.Instance.root.localScale = Vector3.one;
-            GameStage.Instance.spawnRectTransform.spacing = spacing;
-            GameStage.Instance.spawnRectTransform2.spacing = spacing;
+           // GameStage.Instance.spawnRectTransform.spacing = spacing;
+           // GameStage.Instance.spawnRectTransform2.spacing = spacing;
 
             //设置预生成高度
             var high = InGameManager.Instance.pipeSizeConfig.GetTotalHigh(pipeCapacity);
@@ -225,15 +225,15 @@ namespace _02.Scripts.InGame.Controller
                 var expend = currentSize - w;
 
                 var spc = expend / oneLinePipeCount;
-                GameStage.Instance.spawnRectTransform.spacing = spacing - spc;
-                GameStage.Instance.spawnRectTransform2.spacing = spacing - spc;
+              //  GameStage.Instance.spawnRectTransform.spacing = spacing - spc;
+              //  GameStage.Instance.spawnRectTransform2.spacing = spacing - spc;
             }
             else if ((w - currentSize) >= 10)
             {
                 var expend = w - currentSize;
                 var spc = expend / oneLinePipeCount;
-                GameStage.Instance.spawnRectTransform.spacing = spacing + spc;
-                GameStage.Instance.spawnRectTransform2.spacing = spacing + spc;
+               // GameStage.Instance.spawnRectTransform.spacing = spacing + spc;
+               // GameStage.Instance.spawnRectTransform2.spacing = spacing + spc;
             }
         }
 

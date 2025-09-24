@@ -74,9 +74,9 @@ namespace _02.Scripts.InGame.UI
                 // 子物体对齐方式（可根据需求调整，此处居中）
                // layout.childAlignment = TextAnchor.MiddleCenter;
                 // 子物体间距（根据原GridLayout的spacing调整，此处默认10）
-                layout.spacing = 10f;
+                layout.spacing = 0f;
                 // 内边距（保留原逻辑，可根据需求调整）
-                layout.padding = new RectOffset(5, 5, 5, 5);
+                layout.padding = new RectOffset(0, 0, 0, 0);
 
                 // 自适应配置：容器根据子物体大小自动调整
                 if (fitter == null) return;

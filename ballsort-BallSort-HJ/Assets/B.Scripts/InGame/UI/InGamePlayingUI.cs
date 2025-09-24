@@ -26,20 +26,21 @@ namespace _02.Scripts.InGame.UI
 
         // [SerializeField] private DialogButtonItem removeAdActive;
         [SerializeField] private SmartLocalizedText levelTxt;
-
+        [SerializeField] private SmartLocalizedText ProgressTxt;
+        [SerializeField] private SmartLocalizedText TimeTxt;
         [SerializeField] private Text addPipeTxt;
         [SerializeField] private Text revocationToolTxt;
         [SerializeField] private Image revocationToolAdIcon;
         [SerializeField] private Image addPipeToolAdIcon;
         [SerializeField] private List<GameObject> redeemBtn;
-
+        [SerializeField] private ProgressBar _bar = null;
         private void OnEnable()
         {
             if (Game.Instance.Model.IsWangZhuan())
             {
                 btnback.SetActive(false);
                 btnSetting.gameObject.SetActive(true);
-                skinEntryBtn.gameObject.SetActive(true);
+                //  skinEntryBtn.gameObject.SetActive(true);
             }
             btnSetting.onClick.AddListener(ClickSetting);
             btnback.onClick.AddListener(ClickBack);
@@ -68,7 +69,13 @@ namespace _02.Scripts.InGame.UI
             Game.Instance.CurrencyModel.UnregisterToolChangeAction(GoodType.Tool, GoodSubType.AddPipe, RefreshUI);
             Game.Instance.CurrencyModel.UnregisterToolChangeAction(GoodType.Tool, GoodSubType.RevocationTool, RefreshUI);
         }
+        public void SetBar()
+        {
+            float temp = Context.GetCompletionRate();
+            _bar.UpdateProgressSmooth(temp / 100f);
 
+            ProgressTxt.text = $"进度{temp}%";
+        }
         private void RefreshUI(int arg1, int arg2)
         {
             RefreshUI();
@@ -83,7 +90,10 @@ namespace _02.Scripts.InGame.UI
         {
             DialogManager.Instance.GetDialog<OptionDialog>().ShowDialog();
         }
-
+        public void SetTimeText(string text)
+        {
+            TimeTxt.text = text;
+        }
         private void ClickBack()
         {
             TransitionManager.Instance.Transition(0.5f, () => { SceneManager.LoadScene("InGame"); },
@@ -195,7 +205,7 @@ namespace _02.Scripts.InGame.UI
         public void RefreshUI()
         {
             levelTxt.text = Game.Instance.LevelModel.CopiesType == CopiesType.Thread
-                ? $"Level {Game.Instance.LevelModel.EnterLevelID}"
+                ? $"第 {Game.Instance.LevelModel.EnterLevelID} 关"
                 : "SPECIAL LEVEL";
 
             var addPipeToolCount = Game.Instance.CurrencyModel.GetGoodNumber(GoodType.Tool, GoodSubType.AddPipe);
@@ -203,7 +213,7 @@ namespace _02.Scripts.InGame.UI
                 Game.Instance.CurrencyModel.GetGoodNumber(GoodType.Tool, GoodSubType.RevocationTool);
 
             addPipeTxt.text = $"{addPipeToolCount}";
-            revocationToolTxt.text = $"{revocationToolCount}";
+            // revocationToolTxt.text = $"{revocationToolCount}";
 
             //if (addPipeToolCount < 1)
             //    revocationToolTxt.SetActive(false);
@@ -211,8 +221,8 @@ namespace _02.Scripts.InGame.UI
             addPipeToolAdIcon.SetActiveVirtual(addPipeToolCount <= 0);
             revocationToolAdIcon.SetActiveVirtual(revocationToolCount <= 0);
 
-            revocationToolAdIcon.color = UtilClass.HexToColor(!RevocationToolOtherJug() ? "#4F4F4F" : "#FFFFFF");
-            addPipeToolAdIcon.color = UtilClass.HexToColor(!AddPipeOtherJug() ? "#4F4F4F" : "#FFFFFF");
+            //revocationToolAdIcon.color = UtilClass.HexToColor(!RevocationToolOtherJug() ? "#4F4F4F" : "#FFFFFF");
+            //addPipeToolAdIcon.color = UtilClass.HexToColor(!AddPipeOtherJug() ? "#4F4F4F" : "#FFFFFF");
 
             addNewPipeTool.enabled = AddPipeOtherJug();
             addNewPipeTool.interactable = AddPipeOtherJug();
@@ -248,7 +258,7 @@ namespace _02.Scripts.InGame.UI
                 item.SetActiveVirtual(false);
             }
 
-          //  _context.GetView<FristInGameReward>().CheckIsShow();
+            //  _context.GetView<FristInGameReward>().CheckIsShow();
         }
 
         public void ShowSlotItemHideBigTurn(bool showSlot)
