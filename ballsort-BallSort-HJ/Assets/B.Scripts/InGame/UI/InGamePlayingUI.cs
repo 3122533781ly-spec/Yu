@@ -76,6 +76,12 @@ namespace _02.Scripts.InGame.UI
 
             ProgressTxt.text = $"进度{temp}%";
         }
+        public void SetBarToZero()
+        {
+            _bar.UpdateProgress(0);
+
+            ProgressTxt.text = $"进度{0}%";
+        }
         private void RefreshUI(int arg1, int arg2)
         {
             RefreshUI();

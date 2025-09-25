@@ -11,12 +11,12 @@ public class LineBeeInGamePlayingUI : ElementUI<InGameLineBee>
 {
     public void GotoBallSort()
     {
-        if (Game.Instance.CurrencyModel.DiamondNum < 1)
-        {
-            DialogManager.Instance.GetDialog<DiamondGetDialog>().ShowDialog();
-            return;
-        }
-        Game.Instance.CurrencyModel.ConsumeDiamond(1);
+        //if (Game.Instance.CurrencyModel.DiamondNum < 1)
+        //{
+        //    DialogManager.Instance.GetDialog<DiamondGetDialog>().ShowDialog();
+        //    return;
+        //}
+        //Game.Instance.CurrencyModel.ConsumeDiamond(1);
         TransitionManager.Instance.Transition(0.5f, () => { SceneManager.LoadScene("InGameScenario"); },
                      0.5f);
     }
@@ -66,7 +66,7 @@ public class LineBeeInGamePlayingUI : ElementUI<InGameLineBee>
         _btnUseHint.onClick.AddListener(ClickHint);
         _btnGetCoin.onClick.AddListener(ClickGetCoin);
         _btnGetPower.onClick.AddListener(GetPower);
-        Playbtn.onClick.AddListener(EnterGame);
+        Playbtn.onClick.AddListener(GotoBallSort);
         //_btnExit.onClick.AddListener(ClickExit);
         //_btnSetting.onClick.AddListener(ClickSetting);
         //_btnRestart.onClick.AddListener(ClickRestart);

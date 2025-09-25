@@ -50,3 +50,17 @@ public enum GoodSubType
     RevocationTool = 1,
     AddPipe = 2,
 }
+
+[System.Serializable]
+public enum GoodSubType2
+{
+    RevocationTool,
+    AddPipe,
+}
+
+[System.Serializable]
+public class Reward
+{
+    public GoodSubType2 type = GoodSubType2.AddPipe;
+    public int count;
+}

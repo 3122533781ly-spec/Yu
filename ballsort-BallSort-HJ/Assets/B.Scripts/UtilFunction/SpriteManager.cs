@@ -130,7 +130,7 @@ namespace ProjectSpace.BubbleMatch.Scripts.Util
             Debug.Log("场景" + SceneManager.CurrentScene);
             if (SceneManager.CurrentScene == "InGame")
             {
-                GameStage.Instance.bg.sprite = skinData.GetSkin(value, SkinType.Bg);
+                //GameStage.Instance.bg.sprite = skinData.GetSkin(value, SkinType.Bg);
             }
             else
             {
@@ -151,6 +151,7 @@ namespace ProjectSpace.BubbleMatch.Scripts.Util
         public void SetLineBeeBg(int value)
         {
             if (SceneManager.CurrentScene == "InGame")
+                return;
                 GameStage.Instance.bg.sprite = skinData.GetSkin(value, SkinType.Bg);
         }
 

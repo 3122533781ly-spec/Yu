@@ -8,7 +8,7 @@ using ProjectSpace.Lei31Utils.Scripts.Framework.App;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
-
+using Spine.Unity;
 namespace _02.Scripts.InGame.UI
 {
     public class InGamePipeUI : ElementUI<global::InGame>
@@ -35,6 +35,9 @@ namespace _02.Scripts.InGame.UI
         [SerializeField] public RectTransform pipeControllerPanel;
 
         [SerializeField] private ParticleSystem fullPipeEff;
+        [SerializeField] private SkeletonGraphic skeletonGraphic;
+        [SerializeField] private GameObject SpinegameObject;
+
         [SerializeField] private RectTransform FenJieXian;
         public readonly Common.Stack<InGameBallUI> BallLevelEdits = new Common.Stack<InGameBallUI>();
         public bool isAddPipe;
@@ -258,6 +261,9 @@ namespace _02.Scripts.InGame.UI
             if (IsFullAndOneType())
             {
                 fullPipeEff.Play();
+                SpinegameObject.SetActive(true);
+                skeletonGraphic.AnimationState.SetAnimation(0,"penshui", false);
+                skeletonGraphic.AnimationState.Complete += OnAnimationComplete;
                 _isPlayed = true;
 
                 foreach (var ball in BallLevelEdits)
@@ -272,7 +278,11 @@ namespace _02.Scripts.InGame.UI
                 }
             }
         }
-
+        void OnAnimationComplete(Spine.TrackEntry trackEntry)
+        {
+            // 动画播放完成后隐藏
+            SpinegameObject.SetActive(false);
+        }
         private bool IsSpecialModel()
         {
             var ballType = BallLevelEdits.Peek().GetBallData().type;
