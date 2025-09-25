@@ -126,6 +126,7 @@ public class Game : Singleton<Game>
 
     private void InitSystem()
     {
+        SystemGroup.RegisterSystem(new CheckinSystem());
         SystemGroup.RegisterSystem(new LocalUserSystem());
         SystemGroup.RegisterSystem(new RemoteControlSystem());
         SystemGroup.RegisterSystem(new ADStrategySystem());
@@ -137,6 +138,7 @@ public class Game : Singleton<Game>
 
     private void UnloadSystem()
     {
+        SystemGroup.UnregisterSystem<CheckinSystem>();
         SystemGroup.UnregisterSystem<LocalUserSystem>();
         SystemGroup.UnregisterSystem<RemoteControlSystem>();
         SystemGroup.UnregisterSystem<ADStrategySystem>();

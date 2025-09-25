@@ -56,9 +56,12 @@ public class LineBeeInGamePlayingUI : ElementUI<InGameLineBee>
 
     private void OnEnable()
     {
+       
+
         _gotoBallSort.onClick.AddListener(GotoBallSort);
         skinEntryBtn.onClick.AddListener(OpenSkinMainUI);
         btnSetting.onClick.AddListener(ClickSetting);
+        btncheckIn.onClick.AddListener(OpenCheck);
         //_isSettingPanelShow = false;
         //_settingPanelRect.SetAnchoredPositionY(_hideSettingPanelY);
         Refresh();
@@ -163,6 +166,10 @@ public class LineBeeInGamePlayingUI : ElementUI<InGameLineBee>
     //{
     //    App.Instance.BackHome();
     //}
+    private void OpenCheck()
+    {
+        DialogManager.Instance.GetDialog<CheckinDialog>().ShowDialog();
+    }
     public void GetPower()
     {
         DialogManager.Instance.GetDialog<PowerGetDialog>().ShowDialog();
@@ -252,6 +259,7 @@ public class LineBeeInGamePlayingUI : ElementUI<InGameLineBee>
 
     [SerializeField] private Button skinEntryBtn;
     [SerializeField] private Button btnSetting;
+    [SerializeField] private Button btncheckIn;
     [SerializeField] private Button Playbtn;
     [SerializeField] private Button _btnGetCoin;
     [SerializeField] private Button _btnUseHint;

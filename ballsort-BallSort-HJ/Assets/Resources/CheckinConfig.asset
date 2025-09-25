@@ -16,32 +16,28 @@ MonoBehaviour:
   - DayNumber: 1
     Rewards:
     - type: 0
-      count: 100
+      Count: 1
   - DayNumber: 2
     Rewards:
     - type: 0
-      count: 200
+      Count: 1
   - DayNumber: 3
     Rewards:
     - type: 0
-      count: 200
+      Count: 1
   - DayNumber: 4
     Rewards:
     - type: 0
-      count: 200
+      Count: 1
   - DayNumber: 5
     Rewards:
     - type: 0
-      count: 200
+      Count: 1
   - DayNumber: 6
     Rewards:
     - type: 0
-      count: 200
+      Count: 1
   - DayNumber: 7
     Rewards:
     - type: 0
-      count: 300
-    - type: 2
-      count: 3
-    - type: 3
-      count: 3
+      Count: 1

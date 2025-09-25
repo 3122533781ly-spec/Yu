@@ -61,6 +61,6 @@ public enum GoodSubType2
 [System.Serializable]
 public class Reward
 {
-    public GoodSubType2 type = GoodSubType2.AddPipe;
-    public int count;
+    public GoodSubType2 type;
+    public int Count;
 }

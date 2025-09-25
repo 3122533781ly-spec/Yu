@@ -35,7 +35,7 @@ namespace _02.Scripts.InGame.Controller
             var guides = GuideUIConfig.Instance.GetGuideByType(1);
             if (guides.Count > 0)
             {
-                JobUtils.Delay(0.1f, () => { GuideManager.Instance.InitGuideData(guides); });
+               // JobUtils.Delay(0.1f, () => { GuideManager.Instance.InitGuideData(guides); });
             }
         }
 
@@ -56,7 +56,7 @@ namespace _02.Scripts.InGame.Controller
                 _guideUI = null;
             }
 
-            if (!GuideManager.IsQuiting) GuideManager.Instance.OnGuideStepEnd = null;
+           // if (!GuideManager.IsQuiting) GuideManager.Instance.OnGuideStepEnd = null;
         }
     }
 }
