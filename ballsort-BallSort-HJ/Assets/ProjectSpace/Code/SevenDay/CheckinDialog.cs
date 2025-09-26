@@ -42,7 +42,8 @@ public class CheckinDialog : Dialog
 
     private void ClickCheckin(CheckinData data)
     {
-        ClaimReward(data);
+        // ClaimReward(data);
+       
         HandleCheckinOver();
     }
 
@@ -66,7 +67,7 @@ public class CheckinDialog : Dialog
         JobUtils.Delay(0.5f, () =>
         {
             Deactivate();
-
+            DialogManager.Instance.GetDialog<GetRewardDialog>().Init(GoodSubType2.AddPipe);
             //if (App.Instance.GetSystem<CheckinSystem>().CurrentCheckinDayIndex > 0)
             //{
             //    App.Instance.GetSystem<RatingSystem>().CheckAndShowRating();

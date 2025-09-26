@@ -49,7 +49,7 @@ namespace _02.Scripts.InGame.UI
         public void InitBall(BallData data)
         {
             _ballData = data;
-            _isBlackBall = Context.CellMapModel.LevelData.blindBox;
+           // _isBlackBall = Context.CellMapModel.LevelData.blindBox;
             SetIcon();
         }
 

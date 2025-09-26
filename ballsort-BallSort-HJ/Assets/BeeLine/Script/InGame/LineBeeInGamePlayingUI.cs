@@ -62,6 +62,7 @@ public class LineBeeInGamePlayingUI : ElementUI<InGameLineBee>
         skinEntryBtn.onClick.AddListener(OpenSkinMainUI);
         btnSetting.onClick.AddListener(ClickSetting);
         btncheckIn.onClick.AddListener(OpenCheck);
+        btnTask.onClick.AddListener(OpenTask);
         //_isSettingPanelShow = false;
         //_settingPanelRect.SetAnchoredPositionY(_hideSettingPanelY);
         Refresh();
@@ -166,6 +167,12 @@ public class LineBeeInGamePlayingUI : ElementUI<InGameLineBee>
     //{
     //    App.Instance.BackHome();
     //}
+    private void OpenTask()
+    {
+        QuestConfigs configs =Resources.Load<QuestConfigs>("Configs/QuestConfig");
+        var temp = configs.quests[0];
+        DialogManager.Instance.GetDialog<TaskDialog>().InitDialog(temp);
+    }
     private void OpenCheck()
     {
         DialogManager.Instance.GetDialog<CheckinDialog>().ShowDialog();
@@ -260,6 +267,7 @@ public class LineBeeInGamePlayingUI : ElementUI<InGameLineBee>
     [SerializeField] private Button skinEntryBtn;
     [SerializeField] private Button btnSetting;
     [SerializeField] private Button btncheckIn;
+    [SerializeField] private Button btnTask;
     [SerializeField] private Button Playbtn;
     [SerializeField] private Button _btnGetCoin;
     [SerializeField] private Button _btnUseHint;

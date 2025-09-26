@@ -1,7 +1,8 @@
-﻿using System;
-using _02.Scripts.Common;
+﻿using _02.Scripts.Common;
 using _02.Scripts.Config;
+using NPOI.SS.Formula.Functions;
 using ProjectSpace.Lei31Utils.Scripts.Utils2.Dialog;
+using System;
 using UnityEngine;
 
 namespace ProjectSpace.Lei31Utils.Scripts.Framework.App
@@ -277,7 +278,20 @@ namespace ProjectSpace.Lei31Utils.Scripts.Framework.App
             SetGameToolServerProgress();
             StaticModule.GetMaterial((StaticModule.Currency)type, count, $"{type}");
         }
+        public void AddNewGoodCount(GoodSubType2 type)
+        {
 
+            switch (type)
+            {
+                case GoodSubType2.AddPipe:
+                  addPipe.Value +=1;
+                    break;
+                case GoodSubType2.RevocationTool:
+                    revocationTool.Value += 1;
+                    break;
+            }
+
+        }
         public bool CanUseTool(GoodType goodType, GoodSubType goodSubType)
         {
             var res = false;

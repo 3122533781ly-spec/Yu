@@ -19,7 +19,7 @@ MonoBehaviour:
       Count: 1
   - DayNumber: 2
     Rewards:
-    - type: 0
+    - type: 1
       Count: 1
   - DayNumber: 3
     Rewards:
@@ -27,7 +27,7 @@ MonoBehaviour:
       Count: 1
   - DayNumber: 4
     Rewards:
-    - type: 0
+    - type: 1
       Count: 1
   - DayNumber: 5
     Rewards:
@@ -35,7 +35,7 @@ MonoBehaviour:
       Count: 1
   - DayNumber: 6
     Rewards:
-    - type: 0
+    - type: 1
       Count: 1
   - DayNumber: 7
     Rewards:

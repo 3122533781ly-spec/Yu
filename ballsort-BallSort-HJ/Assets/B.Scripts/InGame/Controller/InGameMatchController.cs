@@ -6,6 +6,7 @@ using DG.Tweening;
 using Fangtang;
 using ProjectSpace.Lei31Utils.Scripts.Framework.App;
 using UnityEngine;
+using UnityEngine.UI;
 using EventDispatcher = _02.Scripts.Util.EventDispatcher;
 
 namespace _02.Scripts.InGame.Controller
@@ -14,14 +15,12 @@ namespace _02.Scripts.InGame.Controller
     {
         [SerializeField] public RectTransform empty;
 
-        // 可配置的下落速度参数
         [SerializeField, Range(0.1f, 2f)] private float dropSpeed = 0.5f;
 
         private InGameBallUI _popBallUI;
         private InGamePipeUI _popPipeUI;
         private InGamePipeUI _pushPipeUI;
 
-        //玩家操作信息，key弹出，value推进
         private Stack<List<InGamePipeUI>> _playerStep =
             new Stack<List<InGamePipeUI>>();
 
@@ -44,7 +43,6 @@ namespace _02.Scripts.InGame.Controller
             if (isPlaySound)
             {
                 AudioClipHelper.Instance.PlaySound(AudioClipEnum.ClickPipe, 0.94f);
-                //VibrationManager.Instance.SelectedBlockImpact();
             }
 
             if (_popBallUI)
@@ -58,10 +56,9 @@ namespace _02.Scripts.InGame.Controller
                 else
                 {
                     _isStartTwoAnime = true;
-                    ClickPipe(_popPipeUI, false); //放下
+                    ClickPipe(_popPipeUI, false);
                     _pushPipeUI = clickPipeUI;
-                    ClickPipe(clickPipeUI, false); //拿起一个新的
-                    // Debug.LogError("clickOtherPipe");
+                    ClickPipe(clickPipeUI, false);
                 }
             }
             else
@@ -73,7 +70,6 @@ namespace _02.Scripts.InGame.Controller
 
         private void PopBall(InGamePipeUI inGamePipeUI)
         {
-            //如果当前球正在下落，并点击弹出，则直接弹出
             var polBall = PopBallAndFly(inGamePipeUI);
             if (polBall)
             {
@@ -81,6 +77,10 @@ namespace _02.Scripts.InGame.Controller
                 polBall.StopPushAnime();
                 _popBallUI = polBall;
             }
+        }
+        public InGameBallUI FlyBall()
+        {
+            return _popBallUI;
         }
 
         private void PushBall(InGamePipeUI popPipeUI, InGamePipeUI inGamePipeUI)
@@ -128,20 +128,14 @@ namespace _02.Scripts.InGame.Controller
             _isPopOnAnime = setAnime;
         }
 
-        /// <summary>
-        /// 添加一颗球,并且飞过去
-        /// </summary>
-        /// <param name="inGamePipeUI"></param>
-        /// <param name="pushPipeUI"></param>
-        /// <param name="ballUI"></param>
         private void PushBallAndFly(InGamePipeUI inGamePipeUI, InGamePipeUI pushPipeUI, InGameBallUI ballUI)
         {
             var timeScale = 1;
-            var emptyRectTransform = pushPipeUI.GetAndInitPushToPos();
-            var popPipe = inGamePipeUI;
+            var emptyRectTransform = pushPipeUI.GetAndInitPushToPos(ballUI,ballUI.GetBallData());
+            emptyRectTransform.gameObject.GetComponent<Image>().SetAlpha(0);
+           var popPipe = inGamePipeUI;
             pushPipeUI.PushBall(ballUI);
 
-            // 正确设置动画状态
             SetPushIsAnime(true);
 
             FlyToTopPos(pushPipeUI, ballUI, () =>
@@ -149,38 +143,38 @@ namespace _02.Scripts.InGame.Controller
                 SetIsDropAnime(true);
                 var sequence = DOTween.Sequence();
                 ballUI.SetPushAnime(sequence);
-                var bottomPosition = emptyRectTransform.position;
+                var bottomPosition = emptyRectTransform.transform.position;
 
                 if (_popPipeUI != pushPipeUI && !_isStartTwoAnime)
                 {
                     _popPipeUI.CheckTop();
                 }
-
-                // 使用 dropSpeed 控制下落速度
+                RectTransform ballRect = ballUI.GetComponent<RectTransform>();
+       
                 sequence.Append(ballUI.transform.DOMove(bottomPosition, dropSpeed * timeScale))
-                    .OnComplete(() =>
-                    {
-                        // 【核心修改】将球的父对象设置为垂直布局组而非网格布局组
-                        ballUI.transform.SetParent(pushPipeUI.ballVerticalLayout.transform);
-                        ballUI.SetPushAnime(null);
-                        pushPipeUI.TriggerFullEff();
-                        Context.CheckIsOver();
-                        Context.GetView<InGamePlayingUI>().SetBar();
-                        AddPlayStep(popPipe, pushPipeUI);
-                        _isCoercion = false;
-                        _isStartTwoAnime = false;
-                        SetIsDropAnime(false);
-                        SetPushIsAnime(false); // 在动画真正完成后重置状态
-                    })
-                    .OnKill(() =>
-                    {
-                        ballUI.SetPushAnime(null);
-                        pushPipeUI.TriggerFullEff();
-                        Context.CheckIsOver();
-                        Context.GetView<InGamePlayingUI>().SetBar();
-                        SetIsDropAnime(false);
-                        SetPushIsAnime(false); // 在动画被取消时也重置状态
-                    });
+                        .Join(ballUI.transform.DORotate(Vector3.zero, dropSpeed * timeScale).SetEase(Ease.InOutSine))
+                        .OnComplete(() =>
+                        {
+                          ballUI.transform.SetParent(pushPipeUI.ballVerticalLayout.transform, true);
+                            ballUI.SetPushAnime(null);
+                            pushPipeUI.TriggerFullEff();
+                            Context.CheckIsOver();
+                            Context.GetView<InGamePlayingUI>().SetBar();
+                            AddPlayStep(popPipe, pushPipeUI);
+                            _isCoercion = false;
+                            _isStartTwoAnime = false;
+                            SetIsDropAnime(false);
+                            SetPushIsAnime(false);
+                        })
+                        .OnKill(() =>
+                        {
+                            ballUI.SetPushAnime(null);
+                            pushPipeUI.TriggerFullEff();
+                            Context.CheckIsOver();
+                            Context.GetView<InGamePlayingUI>().SetBar();
+                            SetIsDropAnime(false);
+                            SetPushIsAnime(false);
+                        });
             });
         }
 
@@ -196,17 +190,12 @@ namespace _02.Scripts.InGame.Controller
             return popBall;
         }
 
-        /// <summary>
-        /// 球飞到顶部位置的动画
-        /// </summary>
-        /// <param name="inGamePipeUI"></param>
-        /// <param name="popBall"></param>
-        /// <param name="callBack"></param>
         private void FlyToTopPos(InGamePipeUI inGamePipeUI, InGameBallUI popBall, Action callBack = null)
         {
             popBall.transform.SetParent(inGamePipeUI.popToPos);
             var sequence = DOTween.Sequence();
-            sequence.Append(popBall.transform.DOMove(inGamePipeUI.popToPos.position, 0.1f));
+            sequence.Append(popBall.transform.DOMove(inGamePipeUI.popToPos.position, 0.15f))
+                    .Join(popBall.transform.DORotate(new Vector3(0, 0, 25f), 0.15f).SetEase(Ease.InOutSine));
             sequence.OnComplete(() => { callBack?.Invoke(); });
             sequence.OnKill(() =>
             {
@@ -238,9 +227,6 @@ namespace _02.Scripts.InGame.Controller
                    !BallIsFlyToPipe();
         }
 
-        /// <summary>
-        /// 撤回道具
-        /// </summary>
         public void RevocationTool()
         {
             if (CanUseTool())
@@ -250,7 +236,6 @@ namespace _02.Scripts.InGame.Controller
                 var pop = data[0];
 
                 _isCoercion = true;
-                // Debug.LogError($"弹出{pop.name},{push.name}");
                 ClickPipe(push, false);
                 JobUtils.Delay(0.201f, () => { ClickPipe(pop, false); });
                 AudioClipHelper.Instance.PlaySound(AudioClipEnum.RevocationTool);
@@ -266,7 +251,6 @@ namespace _02.Scripts.InGame.Controller
                 var step = new List<InGamePipeUI>();
                 step.Add(popPipeUI);
                 step.Add(pushPipeUI);
-                // Debug.LogError($"加入{_popPipeUI.name},{_pushPipeUI.name}");
                 _playerStep.Push(step);
                 EventDispatcher.instance.DispatchEvent(AppEventType.PlayerStepCountChange);
             }

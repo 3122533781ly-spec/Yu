@@ -1476,6 +1476,8 @@ MonoBehaviour:
   revocationTool: {fileID: 7521451792251490162}
   addNewPipeTool: {fileID: 2664730128408449900}
   levelTxt: {fileID: 2246680225065015433}
+  ProgressTxt: {fileID: 0}
+  TimeTxt: {fileID: 0}
   addPipeTxt: {fileID: 7791756866161905813}
   revocationToolTxt: {fileID: 0}
   revocationToolAdIcon: {fileID: 0}
@@ -1484,6 +1486,7 @@ MonoBehaviour:
   - {fileID: 8970237890579444766}
   - {fileID: 4484978220991711107}
   - {fileID: 7002660469751548504}
+  _bar: {fileID: 0}
 --- !u!1 &3633885488051441765
 GameObject:
   m_ObjectHideFlags: 0
@@ -2563,6 +2566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75182c90338f4b848b5e4b46a22e535b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smoothDuration: 0.5
   _rectBar: {fileID: 2798717685227313213}
 --- !u!1 &6814556281249128075
 GameObject:
@@ -3829,7 +3833,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 164283705914244078, guid: 4b653c80abf7e5d4aa978f5a942aa5a4, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 18
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 164283705914244078, guid: 4b653c80abf7e5d4aa978f5a942aa5a4, type: 3}
       propertyPath: m_SizeDelta.y
@@ -3857,7 +3861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 794927232311805049, guid: 4b653c80abf7e5d4aa978f5a942aa5a4, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 38
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 794927232311805049, guid: 4b653c80abf7e5d4aa978f5a942aa5a4, type: 3}
       propertyPath: m_SizeDelta.y
@@ -3985,7 +3989,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8442923712017292766, guid: 4b653c80abf7e5d4aa978f5a942aa5a4, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 19
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8442923712017292766, guid: 4b653c80abf7e5d4aa978f5a942aa5a4, type: 3}
       propertyPath: m_SizeDelta.y

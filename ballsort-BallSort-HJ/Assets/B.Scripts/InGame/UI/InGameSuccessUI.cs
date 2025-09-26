@@ -40,34 +40,34 @@ namespace _02.Scripts.InGame.UI
         {
             Deactivate();
 
-            Game.Instance.LevelModel.AddStoreGold(_coinData.count);
-            CoinFlyAnim.Instance.Play(_coinData.count, nextLevelButton.transform.position, AnimIconType.Coin,
-                () =>
-                {
-                    RewardClaimHandle.ClaimReward(_coinData, "InGameSuccess", IapStatus.Free);
+            //Game.Instance.LevelModel.AddStoreGold(_coinData.count);
+            //CoinFlyAnim.Instance.Play(_coinData.count, nextLevelButton.transform.position, AnimIconType.Coin,
+            //    () =>
+            //    {
+            //        RewardClaimHandle.ClaimReward(_coinData, "InGameSuccess", IapStatus.Free);
 
-                    //是网赚并且是最大关卡 || 是网赚并且是特殊关卡直接弹出
-                    if ((Game.Instance.Model.IsWangZhuan() &&
-                         Game.Instance.LevelModel.EnterLevelID == Game.Instance.LevelModel.MaxUnlockLevel.Value - 1 &&
-                         Game.Instance.LevelModel.CopiesType == CopiesType.Thread) ||
-                        Game.Instance.LevelModel.CopiesType == CopiesType.SpecialLevel)
-                    {
-                        //美元结算弹窗控制
-                        if (Game.Instance.CurrencyModel.GetCurrentMoney() <
-                            ConstantConfig.Instance.GetGetMoneyLevel())
-                        {
-                            _context.GetView<InGameWinReward>().Activate();
-                        }
-                        else
-                        {
-                            _context.GetView<InGameBoxDialog>().Activate();
-                        }
-                    }
-                    else
-                    {
-                        EnterNextLevel();
-                    }
-                });
+            //        //是网赚并且是最大关卡 || 是网赚并且是特殊关卡直接弹出
+            //        if ((Game.Instance.Model.IsWangZhuan() &&
+            //             Game.Instance.LevelModel.EnterLevelID == Game.Instance.LevelModel.MaxUnlockLevel.Value - 1 &&
+            //             Game.Instance.LevelModel.CopiesType == CopiesType.Thread) ||
+            //            Game.Instance.LevelModel.CopiesType == CopiesType.SpecialLevel)
+            //        {
+            //            //美元结算弹窗控制
+            //            if (Game.Instance.CurrencyModel.GetCurrentMoney() <
+            //                ConstantConfig.Instance.GetGetMoneyLevel())
+            //            {
+            //                _context.GetView<InGameWinReward>().Activate();
+            //            }
+            //            else
+            //            {
+            //                _context.GetView<InGameBoxDialog>().Activate();
+            //            }
+            //        }
+            //        else
+            //        {
+            //            EnterNextLevel();
+            //        }
+            //    });
             Game.Instance.LevelModel.EnterLevelID += 1;
             Game.Instance.LevelModel.MaxUnlockLevel.Value += 1;
             SoyProfile.Set(SoyProfileConst.NormalLevel, Game.Instance.LevelModel.EnterLevelID);

@@ -89,8 +89,8 @@ namespace _02.Scripts.InGame.UI
             }
 
             // 分别配置三个垂直布局组
-            SetLayoutCommon(ballVerticalLayout, ballSizeFitter);
-            SetLayoutCommon(emptyVerticalLayout, emptySizeFitter);
+           // SetLayoutCommon(ballVerticalLayout, ballSizeFitter);
+          //  SetLayoutCommon(emptyVerticalLayout, emptySizeFitter);
             SetLayoutCommon(bodyVerticalLayout, bodySizeFitter);
         }
 
@@ -127,23 +127,24 @@ namespace _02.Scripts.InGame.UI
                 var data = _pipeData.ballDataStack.GetDataByIndex(i);
                 // 【修改】将球实例化到垂直布局组下
                 var obj = Instantiate(ballPrefab, ballVerticalLayout.transform);
+              
                 _context.Views.Add(obj);
                 obj.InitBall(data);
                 obj.name = $"Ball{data.type}_{i + 1}";
 
                 // 【关键】保留球的原有大小（不被布局强制拉伸）
-                var ballRect = obj.GetComponent<RectTransform>();
-                if (ballRect != null)
-                {
-                    // 锁定球的大小（根据预制体原有大小，或手动设置）
-                    ballRect.anchorMin = new Vector2(0.5f, 0.5f);
-                    ballRect.anchorMax = new Vector2(0.5f, 0.5f);
-                    ballRect.pivot = new Vector2(0.5f, 0.5f);
-                    ballRect.anchoredPosition = Vector2.zero; // 让布局组控制位置
-                }
+                //var ballRect = obj.GetComponent<RectTransform>();
+                //if (ballRect != null)
+                //{
+                //    // 锁定球的大小（根据预制体原有大小，或手动设置）
+                //    ballRect.anchorMin = new Vector2(0.5f, 0.5f);
+                //    ballRect.anchorMax = new Vector2(0.5f, 0.5f);
+                //    ballRect.pivot = new Vector2(0.5f, 0.5f);
+                //    ballRect.anchoredPosition = Vector2.zero; // 让布局组控制位置
+                //}
 
                 PushBall(obj);
-                GetAndInitPushToPos();
+                GetAndInitPushToPos(ballPrefab,data);
             }
 
             CheckTop();
@@ -160,7 +161,7 @@ namespace _02.Scripts.InGame.UI
             if (CanAddPipeSize())
             {
                 _pipeData.pipeCapacity++;
-                SetPipeSize();
+               // SetPipeSize();
             }
         }
 
@@ -187,7 +188,7 @@ namespace _02.Scripts.InGame.UI
             // 【新增】刷新布局，确保新球添加后自适应大小
             if (ballVerticalLayout != null)
             {
-                LayoutRebuilder.ForceRebuildLayoutImmediate(ballVerticalLayout.GetComponent<RectTransform>());
+               // LayoutRebuilder.ForceRebuildLayoutImmediate(ballVerticalLayout.GetComponent<RectTransform>());
             }
         }
 
@@ -204,7 +205,7 @@ namespace _02.Scripts.InGame.UI
                 // 【新增】删除球后刷新布局
                 if (ballVerticalLayout != null)
                 {
-                    LayoutRebuilder.ForceRebuildLayoutImmediate(ballVerticalLayout.GetComponent<RectTransform>());
+                   // LayoutRebuilder.ForceRebuildLayoutImmediate(ballVerticalLayout.GetComponent<RectTransform>());
                 }
             }
 
@@ -291,44 +292,44 @@ namespace _02.Scripts.InGame.UI
 
         private void SpecialPipeTrigger()
         {
-            var toPos = CoinFlyAnim.Instance.GetTargetIconPos(AnimIconType.BigTurn);
-            for (int i = 0; i < _emptyList.Count; i++)
-            {
-                var ballType = BallLevelEdits.Peek().GetBallData().type;
-                if (ballType == BallType.Coin)
-                {
-                    CoinFlyAnim.Instance.Play(1, _emptyList[i].position, toPos, AnimIconType.BigTurn,
-                        () => { },
-                        () =>
-                        {
-                            EventDispatcher.instance.DispatchEvent(AppEventType.FinishSpecialPipe,
-                                0.5f / _emptyList.Count);
-                        });
-                }
-                else if (ballType == BallType.Money)
-                {
-                    CoinFlyAnim.Instance.Play(1, _emptyList[i].position, toPos, AnimIconType.BigTurnMoney,
-                        () => { },
-                        () =>
-                        {
-                            EventDispatcher.instance.DispatchEvent(AppEventType.FinishSpecialPipe,
-                                0.5f / _emptyList.Count);
-                        });
-                }
-            }
+            //var toPos = CoinFlyAnim.Instance.GetTargetIconPos(AnimIconType.BigTurn);
+            //for (int i = 0; i < _emptyList.Count; i++)
+            //{
+            //    var ballType = BallLevelEdits.Peek().GetBallData().type;
+            //    if (ballType == BallType.Coin)
+            //    {
+            //        CoinFlyAnim.Instance.Play(1, _emptyList[i].position, toPos, AnimIconType.BigTurn,
+            //            () => { },
+            //            () =>
+            //            {
+            //                EventDispatcher.instance.DispatchEvent(AppEventType.FinishSpecialPipe,
+            //                    0.5f / _emptyList.Count);
+            //            });
+            //    }
+            //    else if (ballType == BallType.Money)
+            //    {
+            //        CoinFlyAnim.Instance.Play(1, _emptyList[i].position, toPos, AnimIconType.BigTurnMoney,
+            //            () => { },
+            //            () =>
+            //            {
+            //                EventDispatcher.instance.DispatchEvent(AppEventType.FinishSpecialPipe,
+            //                    0.5f / _emptyList.Count);
+            //            });
+            //    }
+            //}
         }
 
         public void ControllerEmptyList()
         {
-            var lastObh = _emptyList.FirstOrDefault();
+            var lastObh = _emptyList.LastOrDefault(); // 取最后一个
             if (lastObh)
             {
-                _emptyList.Remove(lastObh);
-                DestroyImmediate(lastObh.gameObject);
-                // 【新增】删除空物体后刷新布局
+                _emptyList.Remove(lastObh); // 从列表中移除
+                DestroyImmediate(lastObh.gameObject); // 删除空物体
+                                                      // 刷新布局
                 if (emptyVerticalLayout != null)
                 {
-                    LayoutRebuilder.ForceRebuildLayoutImmediate(emptyVerticalLayout.GetComponent<RectTransform>());
+                   // LayoutRebuilder.ForceRebuildLayoutImmediate(emptyVerticalLayout.GetComponent<RectTransform>());
                 }
             }
         }
@@ -336,29 +337,30 @@ namespace _02.Scripts.InGame.UI
         /// <summary>
         /// 【修改】空物体添加到垂直布局组，支持不规则大小
         /// </summary>
-        public RectTransform GetAndInitPushToPos()
+        public RectTransform GetAndInitPushToPos(InGameBallUI prefab,BallData data)
         {
-            // 【修改】将空物体实例化到垂直布局组下
-            var spawnEmpty = Instantiate(Context.GetController<InGameMatchController>().empty, emptyVerticalLayout.transform);
-            // 【关键】保留空物体原有大小
-            var emptyRect = spawnEmpty.GetComponent<RectTransform>();
-            if (emptyRect != null)
-            {
-                emptyRect.anchorMin = new Vector2(0.5f, 0.5f);
-                emptyRect.anchorMax = new Vector2(0.5f, 0.5f);
-                emptyRect.pivot = new Vector2(0.5f, 0.5f);
-                emptyRect.anchoredPosition = Vector2.zero;
-            }
+            var emptypre= Instantiate(prefab, emptyPanel.transform);
+            //emptypre.gameObject.SetActive(false);
+            var spawnEmpty = emptypre.gameObject.GetComponent<RectTransform>();
+            emptypre.InitBall(data);
             _emptyList.Add(spawnEmpty);
-
-            // 【新增】刷新空物体布局
-            if (emptyVerticalLayout != null)
-            {
-                LayoutRebuilder.ForceRebuildLayoutImmediate(emptyVerticalLayout.GetComponent<RectTransform>());
-            }
             return spawnEmpty;
-        }
 
+        }
+        public RectTransform GetLastPushPos()
+        {
+            int lastIndex = ballVerticalLayout.transform.childCount - 1;
+            Transform lastChild;
+            if (lastIndex < 0)
+            {
+                lastChild = ballVerticalLayout.transform;
+                Debug.Log("大小" + lastIndex);
+            }
+            else lastChild = ballVerticalLayout.transform.GetChild(lastIndex);
+            Debug.Log("大小" + lastIndex);
+            RectTransform lastRect = lastChild.GetComponent<RectTransform>();
+            return lastRect;
+        }
         #region 管子大小属性控制（修改布局组件引用）
         [Header("管子大小属性控制")]
         [SerializeField] private RectTransform rootRectTransform;
@@ -375,31 +377,18 @@ namespace _02.Scripts.InGame.UI
             var currentAlreadySpawn = pipeControllerEmpty.Count;
             rootRectTransform.sizeDelta = new Vector2(w, h);
 
-            // 生成分割线（逻辑不变，布局由bodyVerticalLayout控制）
             for (int i = 0; i < (int)_pipeData.pipeCapacity - currentAlreadySpawn; i++)
             {
-                var obj = Instantiate(FenJieXian, bodyVerticalLayout.transform);
+                var obj = Instantiate(FenJieXian,
+                    pipeControllerPanel.transform);
                 pipeControllerEmpty.Add(obj);
-                // 【关键】保留分割线原有大小
-                var lineRect = obj.GetComponent<RectTransform>();
-                if (lineRect != null)
-                {
-                    lineRect.anchorMin = new Vector2(0.5f, 0.5f);
-                    lineRect.anchorMax = new Vector2(0.5f, 0.5f);
-                    lineRect.pivot = new Vector2(0.5f, 0.5f);
-                    lineRect.anchoredPosition = Vector2.zero;
-                }
             }
 
-            // 【修改】移除原GridLayout的cellSize配置，改用垂直布局的自动适配
             var pipeConfig = UtilClass.GetSizeFitter(Context.CellMapModel.LevelData.pipeNumber, _pipeData.pipeCapacity);
+            // gridLayoutGroup.cellSize = new Vector2(pipeConfig.ball, pipeConfig.ball);
+            // emptyLayoutGroup.cellSize = new Vector2(pipeConfig.ball, pipeConfig.ball);
+            // bodyLayoutGroup.cellSize = new Vector2(pipeConfig.ball, pipeConfig.ball);
             pipeController.RefreshSKin();
-
-            // 【新增】刷新主体布局
-            if (bodyVerticalLayout != null)
-            {
-                LayoutRebuilder.ForceRebuildLayoutImmediate(bodyVerticalLayout.GetComponent<RectTransform>());
-            }
         }
 
         private void RefreshSKin(object[] objs)
